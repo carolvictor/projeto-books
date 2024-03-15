@@ -52,6 +52,9 @@
         <!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide"><img src="assets/ApacheKafka.svg" alt="Livro sobre ApacheKafka e Spring Boot"></div>
@@ -61,9 +64,7 @@
       <div class="swiper-slide"><img src="assets/Angular.svg" alt="Livro sobre Angular e Firebase"></div>
       <div class="swiper-slide"><img src="assets/UX.svg" alt="Livro sobre UX estratégico"></div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
+      
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
@@ -78,7 +79,13 @@
         const swiper = new Swiper('.swiper', {
             spaceBetween: 10,
             slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
         });
     </script>    
 </body>
 </html>
+
+
